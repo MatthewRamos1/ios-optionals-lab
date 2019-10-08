@@ -120,9 +120,13 @@ var numSum = (numOne ?? 0) + (numTwo ?? 0) + (numThree ?? 0)
 
 a. Given the variable `numbers` below, write code that prints "The sum of all the numbers is " followed by their sum.  If a number is `nil`, don't add it to the sum.  If all numbers are `nil`, the sum is zero.
 
+b. Using the same variable, find the average of all non-nil values.
+
 ```swift
 var numbers = [Int?]()
 var sum = 0
+var average = 0
+counter = 0
 
 for _ in 0..<10 {
     numbers.append(Bool.random() ? Int.random(in: 0...100) : nil)
@@ -131,12 +135,13 @@ for _ in 0..<10 {
 
 for num in numbers {
     sum += (num ?? 0)
+    counter += 1
 }
+average = sum/counter
 print("The sum of all the numbers is \(sum)")
-
+print("The average of all numbers is \(average)")
 ```
 
-b. Using the same variable, find the average of all non-nil values.
 
 ## Extra Questions
 
